@@ -9,6 +9,7 @@ $site = Installer::installed() ? Settings::get('site_adi') : 'künye';
   <meta name="robots" content="noindex">
   <title><?= e(($title ?? '') !== '' ? $title . ' · ' . $site : $site) ?></title>
   <link rel="stylesheet" href="<?= e(asset('css/kunye.css')) ?>">
+  <link rel="stylesheet" href="<?= e(asset('css/izgara.css')) ?>">
   <script src="<?= e(asset('js/js.js')) ?>"></script>
   <script src="<?= e(asset('js/kunye.js')) ?>" defer></script>
 </head>

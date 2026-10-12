@@ -1,0 +1,54 @@
+/* künye — "Siyah Izgara" teması, panel ekleri (panel.css sonrasında yüklenir) */
+
+.pside { background: var(--page); }
+.pside__brand .logo { font-weight: 600; }
+.pside__brand small { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
+.pnav a { border-radius: 8px; font-weight: 400; }
+.pnav a.is-on { background: var(--bg); border: 1px solid var(--line); box-shadow: none; font-weight: 500; }
+.pnav .n { background: var(--accent); color: var(--on-accent); font-family: var(--font-mono); }
+.phead { background: color-mix(in srgb, var(--page) 90%, transparent); }
+.phead .crumbs b { font-weight: 500; }
+.pbody__title h2 { font-size: 20px; }
+
+.card { border-radius: 16px; background: var(--bg); box-shadow: var(--shadow-card); }
+.card__head .meta { font-family: var(--font-mono); font-size: 11px; letter-spacing: .04em; }
+.status { font-size: 11px; letter-spacing: .04em; }
+.done { font-family: var(--font-mono); }
+
+.ptools .fsearch { border-radius: 8px; }
+.dtable-wrap { border-radius: 8px; background: var(--bg); }
+.dtable th { font-family: var(--font-mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; background: var(--page); }
+.usage__bar span { background: var(--accent); }
+
+.drop { border-radius: 8px; background: var(--page); }
+.drop:hover, .drop.is-over { border-color: var(--accent); background: var(--accent-soft); }
+.drop u { color: var(--accent-text); text-decoration: underline; text-underline-offset: 3px; }
+.imgc { border-radius: 8px; background: var(--bg); }
+.imgc__badge { background: var(--accent); color: var(--on-accent); font-family: var(--font-mono); letter-spacing: .04em; }
+.imgc__meta { font-family: var(--font-mono); font-size: 11px; }
+.bar span { background: var(--accent); }
+
+.icons span { border-radius: 8px; }
+.icons input:checked + span { border-color: var(--accent); background: var(--accent); color: var(--on-accent); }
+.val { border-radius: 6px; }
+.merge { border-radius: 8px; }
+.trow--head { font-family: var(--font-mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
+.gedit { background: var(--page); }
+
+.qlist { border-radius: 8px; background: var(--bg); }
+.qitem.is-on { background: var(--accent-soft); }
+.qitem.is-on::before { background: var(--accent); }
+.qitem__top time { font-family: var(--font-mono); font-size: 11px; }
+.qpic { border-radius: 8px; }
+.tag { border-radius: 4px; font-size: 10.5px; letter-spacing: .04em; text-transform: uppercase; }
+.tag--fix { background: var(--accent-soft); color: var(--accent-text); }
+.note { border-left-color: var(--accent); border-radius: 0 8px 8px 0; }
+.note a { color: var(--accent-text); }
+.dhead a { color: var(--accent-text); }
+.trust { font-family: var(--font-mono); font-size: 11px; }
+
+.mbar2 { border-radius: 12px; background: var(--accent); color: var(--on-accent); }
+.mbar2 .input { background: var(--bg); }
+.mbar2 .btn, .mbar2 .btn:hover { background: var(--on-accent); color: var(--accent); box-shadow: none; }
+.sim a, .combo__warn button { color: var(--accent-text); }
+.combo__list { border-radius: 8px; }

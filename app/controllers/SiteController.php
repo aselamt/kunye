@@ -8,7 +8,10 @@ final class SiteController
         PageCache::allow();
         $cats = array_values(array_filter(Catalog::categories(), static fn($c) => (int) $c['item_count'] > 0));
         usort($cats, static fn($a, $b) => (int) $b['item_count'] <=> (int) $a['item_count']);
-        View::send('site/home', ['home' => true, 'popular' => array_slice($cats, 0, 4), 'links' => array_slice($cats, 0, 5)]);
+        View::send('site/home', [
+            'home' => true, 'popular' => array_slice($cats, 0, 4), 'links' => array_slice($cats, 0, 5),
+            'itemTotal' => array_sum(array_map(static fn($c) => (int) $c['item_count'], $cats)), 'catTotal' => count($cats),
+        ]);
     }
 
     public static function categories(): void

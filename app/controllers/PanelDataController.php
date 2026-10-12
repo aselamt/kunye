@@ -171,6 +171,8 @@ final class PanelDataController
             Settings::set([
                 'site_adi' => Text::clean((string) ($in['site_adi'] ?? ''), 60) ?: 'künye',
                 'arama_metni' => Text::clean((string) ($in['arama_metni'] ?? ''), 80),
+                'ana_baslik' => Text::clean((string) ($in['ana_baslik'] ?? ''), 120),
+                'duyuru' => Text::clean((string) ($in['duyuru'] ?? ''), 160),
                 'aciklama' => Text::clean((string) ($in['aciklama'] ?? ''), 300),
                 'sayfa_basina' => $int('sayfa_basina', 6, 100, 24),
                 'ust_baglantilar' => Text::clean((string) ($in['ust_baglantilar'] ?? ''), 500),

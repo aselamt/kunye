@@ -10,6 +10,8 @@ $engine = Images::engine();
     <div class="card__body fields">
       <label class="field"><span class="lbl">Site adı</span><span class="input"><input name="site_adi" value="<?= e($s['site_adi']) ?>" maxlength="60"></span></label>
       <label class="field"><span class="lbl">Arama kutusu metni</span><span class="input"><input name="arama_metni" value="<?= e($s['arama_metni']) ?>" maxlength="80"></span></label>
+      <label class="field field--full"><span class="lbl">Ana sayfa başlığı</span><span class="input"><input name="ana_baslik" value="<?= e($s['ana_baslik']) ?>" maxlength="120"></span><span class="hint">Vurgulanacak ifadeyi *yıldızlar* arasına yaz; boş bırakırsan başlık gösterilmez</span></label>
+      <label class="field field--full"><span class="lbl">Duyuru şeridi</span><span class="input"><input name="duyuru" value="<?= e($s['duyuru']) ?>" maxlength="160"></span><span class="hint">Doluysa tüm sayfaların üstünde koyu bir şerit olarak görünür</span></label>
       <label class="field field--full"><span class="lbl">Açıklama (arama motorları için)</span><span class="input"><input name="aciklama" value="<?= e($s['aciklama']) ?>" maxlength="300"></span></label>
       <label class="field"><span class="lbl">Sayfa başına öğe</span><span class="input"><input name="sayfa_basina" value="<?= e($s['sayfa_basina']) ?>" inputmode="numeric"></span></label>
       <label class="field"><span class="lbl">Üst menü bağlantıları</span><span class="input"><input name="ust_baglantilar" value="<?= e($s['ust_baglantilar']) ?>" placeholder="Hakkında=/hakkinda, GitHub=https://github.com/…"></span><span class="hint">Ad=adres, virgülle ayır</span></label>

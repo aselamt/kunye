@@ -22,6 +22,8 @@ $f = flash();
   <link rel="icon" href="<?= e(url('favicon.svg')) ?>" type="image/svg+xml">
   <link rel="stylesheet" href="<?= e(asset('css/kunye.css')) ?>">
   <link rel="stylesheet" href="<?= e(asset('css/panel.css')) ?>">
+  <link rel="stylesheet" href="<?= e(asset('css/izgara.css')) ?>">
+  <link rel="stylesheet" href="<?= e(asset('css/izgara-panel.css')) ?>">
   <script src="<?= e(asset('js/js.js')) ?>"></script>
   <script src="<?= e(asset('js/kunye.js')) ?>" defer></script>
   <script src="<?= e(asset('js/panel.js')) ?>" defer></script>

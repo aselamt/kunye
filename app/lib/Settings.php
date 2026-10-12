@@ -6,6 +6,8 @@ final class Settings
     public const DEFAULTS = [
         'site_adi' => 'künye',
         'arama_metni' => 'Ne arıyorsun?',
+        'ana_baslik' => 'Her şeyin *tüm özellikleri*, tek aramada.',
+        'duyuru' => '',
         'aciklama' => 'Her şeyin tüm özellikleri, tek tıkla filtrelenebilir.',
         'sayfa_basina' => '24',
         'ust_baglantilar' => '',
