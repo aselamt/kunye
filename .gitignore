@@ -1,0 +1,11 @@
+# çalışma zamanı verisi (paketteki koruma dosyaları hariç)
+/data/*
+!/data/.htaccess
+!/data/index.html
+!/data/koruma.txt
+/uploads/*
+!/uploads/.htaccess
+!/uploads/index.html
+/dist/
+.DS_Store
+.claude/

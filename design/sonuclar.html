@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>künye</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/ek.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3.5 2.6 5.3 5.9.9-4.25 4.1 1 5.85L12 16.9l-5.25 2.75 1-5.85L3.5 9.7l5.9-.9z"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M11 18.5h2"/></symbol>
+  <symbol id="i-battery" viewBox="0 0 24 24"><rect x="2.5" y="7" width="16.5" height="10" rx="2"/><path d="M21.5 11v2M6 10.5v3M9.5 10.5v3"/></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><path d="M3.5 8.5a2 2 0 0 1 2-2h2.2l1.6-2h5.4l1.6 2h2.2a2 2 0 0 1 2 2V18a2 2 0 0 1-2 2h-13a2 2 0 0 1-2-2z"/><circle cx="12" cy="13" r="3.5"/></symbol>
+  <symbol id="i-cpu" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9.5" y="9.5" width="5" height="5" rx=".5"/><path d="M9 2.5V6M15 2.5V6M9 18v3.5M15 18v3.5M2.5 9H6M2.5 15H6M18 9h3.5M18 15h3.5"/></symbol>
+  <symbol id="i-drive" viewBox="0 0 24 24"><rect x="3" y="13" width="18" height="7" rx="2"/><path d="M5 13 7.2 5.5A2 2 0 0 1 9.1 4h5.8a2 2 0 0 1 1.9 1.5L19 13M7 16.5h.01M10.5 16.5h.01"/></symbol>
+  <symbol id="i-wifi" viewBox="0 0 24 24"><path d="M2.5 9a14 14 0 0 1 19 0M5.5 12.5a9.5 9.5 0 0 1 13 0M9 16a4.5 4.5 0 0 1 6 0M12 19.5h.01"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5z"/><path d="m3 13 9 5 9-5"/></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 7-5 5 5 5M16 7l5 5-5 5"/></symbol>
+  <symbol id="i-laptop" viewBox="0 0 24 24"><rect x="4" y="4.5" width="16" height="11" rx="1.5"/><path d="M2 19.5h20"/></symbol>
+  <symbol id="i-droplet" viewBox="0 0 24 24"><path d="M12 3s6.5 6.6 6.5 11.2a6.5 6.5 0 0 1-13 0C5.5 9.6 12 3 12 3z"/></symbol>
+  <symbol id="i-watch" viewBox="0 0 24 24"><rect x="6.5" y="6.5" width="11" height="11" rx="3"/><path d="m9 6.5.8-4h4.4l.8 4M9 17.5l.8 4h4.4l.8-4"/></symbol>
+  <symbol id="i-headphones" viewBox="0 0 24 24"><path d="M4 15v-3a8 8 0 0 1 16 0v3"/><rect x="3" y="14" width="4.5" height="7" rx="1.5"/><rect x="16.5" y="14" width="4.5" height="7" rx="1.5"/></symbol>
+  <symbol id="i-tag" viewBox="0 0 24 24"><path d="M3 12.2V4a1 1 0 0 1 1-1h8.2a1 1 0 0 1 .7.3l8 8a1 1 0 0 1 0 1.4l-8.2 8.2a1 1 0 0 1-1.4 0l-8-8a1 1 0 0 1-.3-.7z"/><circle cx="7.5" cy="7.5" r="1.2"/></symbol>
+  <symbol id="i-yes" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8 12.3 2.7 2.7L16 9.7"/></symbol>
+  <symbol id="i-no" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m9 9 6 6M15 9l-6 6"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M7 7l10 10M17 7 7 17"/></symbol>
+  <symbol id="i-pencil" viewBox="0 0 24 24"><path d="M4 20h4L19.5 8.5a2.1 2.1 0 0 0-3-3L5 17z"/><path d="m14.5 7.5 2 2"/></symbol>
+  <symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12M20 18h0"/><circle cx="16" cy="6" r="2"/><circle cx="10" cy="12" r="2"/><circle cx="18" cy="18" r="2"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-grip" viewBox="0 0 24 24"><circle cx="9" cy="6" r=".9"/><circle cx="15" cy="6" r=".9"/><circle cx="9" cy="12" r=".9"/><circle cx="15" cy="12" r=".9"/><circle cx="9" cy="18" r=".9"/><circle cx="15" cy="18" r=".9"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-more" viewBox="0 0 24 24"><circle cx="5" cy="12" r=".9"/><circle cx="12" cy="12" r=".9"/><circle cx="19" cy="12" r=".9"/></symbol>
+  <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M9 7V4.5h6V7M6 7l1 13h10l1-13"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-9 9"/></symbol>
+  <symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 15V4M7 9l5-5 5 5M4 15v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9z"/><path d="m4 7.5 8 4.5 8-4.5M12 12v9"/></symbol>
+  <symbol id="i-grid" viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></symbol>
+  <symbol id="i-inbox" viewBox="0 0 24 24"><path d="M3 13h5l1.5 3h5L16 13h5"/><path d="M5.5 5h13L21 13v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-6z"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.6a3.5 3.5 0 0 1 0 6.8M18 14.2a6.5 6.5 0 0 1 3.5 5.8"/></symbol>
+  <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3.5 2.5 20h19z"/><path d="M12 10v4.5M12 17.3h.01"/></symbol>
+  <symbol id="i-merge" viewBox="0 0 24 24"><path d="M6 4v4a6 6 0 0 0 6 6h0a6 6 0 0 1 6 6M18 4v4a6 6 0 0 1-6 6"/><path d="m15 17 3 3 3-3"/></symbol>
+  <symbol id="i-logout" viewBox="0 0 24 24"><path d="M14 4h4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-4M10 16l-4-4 4-4M6 12h10"/></symbol>
+  <symbol id="i-list" viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11M4.5 6h.01M4.5 12h.01M4.5 18h.01"/></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 11a8 8 0 0 0-14.6-4.5L4 8M4 4v4h4M4 13a8 8 0 0 0 14.6 4.5L20 16M20 20v-4h-4"/></symbol>
+
+</svg>
+
+<header class="topbar">
+  <div class="wrap topbar__in">
+    <a class="logo" href="index.html">künye<span>.</span></a>
+    <form class="search search--sm" role="search" action="sonuclar.html">
+      <label class="search__box">
+        <svg class="icon icon--sm"><use href="#i-search"/></svg>
+        <input class="search__input" type="search" name="q" placeholder="Ara" autocomplete="off" aria-label="Ara" value="ultra">
+      </label>
+    </form>
+    <nav class="topbar__nav">
+      <a class="icon-btn" href="favoriler.html" title="Favorilerim"><svg class="icon"><use href="#i-star"/></svg></a>
+      <a class="btn btn--ghost hide-sm" href="giris.html">Giriş yap</a>
+      <a class="icon-btn show-sm" href="giris.html" title="Giriş yap"><svg class="icon"><use href="#i-user"/></svg></a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap page">
+  <nav class="crumbs" aria-label="Konum"><a href="index.html">Ana sayfa</a><span class="sep">/</span><span>Arama</span></nav>
+  <div class="list-head">
+    <h1 class="title">“ultra” için sonuçlar</h1>
+    <span class="count">2 kategori · 37 öğe · 3 değer</span>
+  </div>
+
+  <section class="rsec">
+    <h2 class="rsec__h">Kategoriler</h2>
+    <div class="cats">
+      <a class="catc" href="liste.html"><span class="suggest__icon"><svg class="icon"><use href="#i-laptop"/></svg></span><span class="catc__t"><span><mark>Ultra</mark>book'lar</span><small>Bilgisayar · 318 öğe</small></span></a>
+      <a class="catc" href="liste.html"><span class="suggest__icon"><svg class="icon"><use href="#i-droplet"/></svg></span><span class="catc__t"><span><mark>Ultra</mark>sonik Nemlendiriciler</span><small>Ev · 64 öğe</small></span></a>
+    </div>
+  </section>
+
+  <section class="rsec">
+    <h2 class="rsec__h">Özellik değerleri</h2>
+    <div class="vals vals--lg">
+      <a class="vchip" href="liste.html"><mark>Ultra</mark> Geniş Açı Kamera <small>Telefonlar · 402</small></a>
+      <a class="vchip" href="liste.html"><mark>Ultra</mark> HDR <small>Televizyonlar · 41</small></a>
+      <a class="vchip" href="liste.html"><mark>Ultra</mark>sonik Parmak İzi <small>Telefonlar · 96</small></a>
+    </div>
+  </section>
+
+  <section class="rsec">
+    <h2 class="rsec__h">Öğeler <span style="text-transform:none;letter-spacing:0;font-weight:400">37</span></h2>
+    <div class="rows">
+        <article class="row">
+          <div class="row__media"><img src="img/p3.svg" width="39" height="78" alt="" loading="lazy"></div>
+          <div>
+            <h2 class="row__title"><a href="detay.html">Xiaomi 17 <mark>Ultra</mark></a></h2>
+            <p class="row__sub">Telefon · 2026</p>
+            <dl class="row__specs"><div><dt>Ekran</dt><dd>6,9″</dd></div><div><dt>Depolama</dt><dd>512 GB</dd></div><div><dt>RAM</dt><dd>16 GB</dd></div><div><dt>Batarya</dt><dd>6000 mAh</dd></div></dl>
+          </div>
+          <button class="icon-btn row__fav is-fav" aria-label="Favorilerden çıkar"><svg class="icon"><use href="#i-star"/></svg></button>
+        </article>
+        <article class="row">
+          <div class="row__media"><img src="img/p1.svg" width="39" height="78" alt="" loading="lazy"></div>
+          <div>
+            <h2 class="row__title"><a href="detay.html">Vivo X300 <mark>Ultra</mark></a></h2>
+            <p class="row__sub">Telefon · 2026</p>
+            <dl class="row__specs"><div><dt>Ekran</dt><dd>6,82″</dd></div><div><dt>Depolama</dt><dd>512 GB</dd></div><div><dt>RAM</dt><dd>16 GB</dd></div><div><dt>Batarya</dt><dd>6600 mAh</dd></div></dl>
+          </div>
+          <button class="icon-btn row__fav" aria-label="Favorilere ekle"><svg class="icon"><use href="#i-star"/></svg></button>
+        </article>
+        <article class="row">
+          <div class="row__media"><img src="img/p6.svg" width="39" height="78" alt="" loading="lazy"></div>
+          <div>
+            <h2 class="row__title"><a href="detay.html">Samsung Galaxy S26 <mark>Ultra</mark></a></h2>
+            <p class="row__sub">Telefon · 2026</p>
+            <dl class="row__specs"><div><dt>Ekran</dt><dd>6,9″</dd></div><div><dt>Depolama</dt><dd>256 GB</dd></div><div><dt>RAM</dt><dd>12 GB</dd></div><div><dt>Batarya</dt><dd>5000 mAh</dd></div></dl>
+          </div>
+          <button class="icon-btn row__fav" aria-label="Favorilere ekle"><svg class="icon"><use href="#i-star"/></svg></button>
+        </article>
+        <article class="row">
+          <div class="row__media"><img src="img/w1.svg" width="39" height="78" alt="" loading="lazy"></div>
+          <div>
+            <h2 class="row__title"><a href="detay.html">Apple Watch <mark>Ultra</mark> 3</a></h2>
+            <p class="row__sub">Akıllı Saat · 2025</p>
+            <dl class="row__specs"><div><dt>Ekran</dt><dd>1,98″</dd></div><div><dt>Kasa</dt><dd>49 mm</dd></div><div><dt>Batarya</dt><dd>42 saat</dd></div></dl>
+          </div>
+          <button class="icon-btn row__fav" aria-label="Favorilere ekle"><svg class="icon"><use href="#i-star"/></svg></button>
+        </article>
+    </div>
+    <nav class="pager" aria-label="Sayfalar"><span class="is-on">1</span><a href="#">2</a><a href="#">3</a><a href="#">→</a></nav>
+  </section>
+</main>
+
+<nav class="mocknav"><a href="index.html" title="Ana">1</a><a href="arama.html" title="Arama">2</a><a href="liste.html" title="Liste">3</a><a href="detay.html" title="Detay">4</a><a href="duzeltme.html" title="Düzeltme">5</a><a href="panel-oge.html" title="Öğe">6</a><a href="panel-sablon.html" title="Şablon">7</a><a href="panel-oneriler.html" title="Öneriler">8</a><a href="sonuclar.html" aria-current="page">9 Sonuçlar</a><a href="favoriler.html" title="Favoriler">10</a><a href="giris.html" title="Giriş">11</a><a href="kurulum.html" title="Kurulum">12</a><a href="panel-ogeler.html" title="Öğeler">13</a><a href="panel-degerler.html" title="Değerler">14</a><a href="panel-kullanicilar.html" title="Kullanıcılar">15</a><a href="panel-ayarlar.html" title="Ayarlar">16</a></nav>
+</body>
+</html>

@@ -1,0 +1,43 @@
+# künye — Apache / LiteSpeed yapılandırması
+# Alan adının kökünde de alt klasörde de RewriteBase gerekmeden çalışır.
+
+Options -Indexes -MultiViews
+DirectoryIndex index.php
+AddDefaultCharset utf-8
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Ön denetleyici kendisi
+  RewriteRule ^index\.php$ - [L]
+
+  # Yalnızca assets/ ve uploads/ altındaki gerçek statik dosyalar doğrudan sunulur
+  RewriteCond %{REQUEST_FILENAME} -f
+  RewriteRule ^(assets|uploads)/[^/].*\.(css|js|svg|webp|avif|png|jpe?g|gif|ico|woff2)$ - [L]
+
+  # Geri kalan her şey (kaynak kod, veri, yapılandırma, README…) uygulamaya gider
+  RewriteRule ^ index.php [L,QSA]
+</IfModule>
+
+# mod_rewrite yoksa bile hassas dosyaları kapat
+<FilesMatch "(?i)\.(sqlite|sqlite3|db|db-wal|db-shm|sqlite-wal|sqlite-shm|log|md|lock|kilit|ini|sh|zip|json|txt|dist|phar|bak|sql)$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+  </IfModule>
+</FilesMatch>
+
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  <FilesMatch "\.(css|js|svg|webp|avif|png|jpe?g|gif|woff2)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+</IfModule>
+
+<IfModule mod_mime.c>
+  AddType image/avif .avif
+  AddType image/webp .webp
+</IfModule>

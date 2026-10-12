@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Öğe düzenle · künye panel</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/form.css">
+  <link rel="stylesheet" href="css/panel.css">
+  <link rel="stylesheet" href="css/ek.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3.5 2.6 5.3 5.9.9-4.25 4.1 1 5.85L12 16.9l-5.25 2.75 1-5.85L3.5 9.7l5.9-.9z"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M11 18.5h2"/></symbol>
+  <symbol id="i-battery" viewBox="0 0 24 24"><rect x="2.5" y="7" width="16.5" height="10" rx="2"/><path d="M21.5 11v2M6 10.5v3M9.5 10.5v3"/></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><path d="M3.5 8.5a2 2 0 0 1 2-2h2.2l1.6-2h5.4l1.6 2h2.2a2 2 0 0 1 2 2V18a2 2 0 0 1-2 2h-13a2 2 0 0 1-2-2z"/><circle cx="12" cy="13" r="3.5"/></symbol>
+  <symbol id="i-cpu" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9.5" y="9.5" width="5" height="5" rx=".5"/><path d="M9 2.5V6M15 2.5V6M9 18v3.5M15 18v3.5M2.5 9H6M2.5 15H6M18 9h3.5M18 15h3.5"/></symbol>
+  <symbol id="i-drive" viewBox="0 0 24 24"><rect x="3" y="13" width="18" height="7" rx="2"/><path d="M5 13 7.2 5.5A2 2 0 0 1 9.1 4h5.8a2 2 0 0 1 1.9 1.5L19 13M7 16.5h.01M10.5 16.5h.01"/></symbol>
+  <symbol id="i-wifi" viewBox="0 0 24 24"><path d="M2.5 9a14 14 0 0 1 19 0M5.5 12.5a9.5 9.5 0 0 1 13 0M9 16a4.5 4.5 0 0 1 6 0M12 19.5h.01"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5z"/><path d="m3 13 9 5 9-5"/></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 7-5 5 5 5M16 7l5 5-5 5"/></symbol>
+  <symbol id="i-laptop" viewBox="0 0 24 24"><rect x="4" y="4.5" width="16" height="11" rx="1.5"/><path d="M2 19.5h20"/></symbol>
+  <symbol id="i-droplet" viewBox="0 0 24 24"><path d="M12 3s6.5 6.6 6.5 11.2a6.5 6.5 0 0 1-13 0C5.5 9.6 12 3 12 3z"/></symbol>
+  <symbol id="i-watch" viewBox="0 0 24 24"><rect x="6.5" y="6.5" width="11" height="11" rx="3"/><path d="m9 6.5.8-4h4.4l.8 4M9 17.5l.8 4h4.4l.8-4"/></symbol>
+  <symbol id="i-headphones" viewBox="0 0 24 24"><path d="M4 15v-3a8 8 0 0 1 16 0v3"/><rect x="3" y="14" width="4.5" height="7" rx="1.5"/><rect x="16.5" y="14" width="4.5" height="7" rx="1.5"/></symbol>
+  <symbol id="i-tag" viewBox="0 0 24 24"><path d="M3 12.2V4a1 1 0 0 1 1-1h8.2a1 1 0 0 1 .7.3l8 8a1 1 0 0 1 0 1.4l-8.2 8.2a1 1 0 0 1-1.4 0l-8-8a1 1 0 0 1-.3-.7z"/><circle cx="7.5" cy="7.5" r="1.2"/></symbol>
+  <symbol id="i-yes" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8 12.3 2.7 2.7L16 9.7"/></symbol>
+  <symbol id="i-no" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m9 9 6 6M15 9l-6 6"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M7 7l10 10M17 7 7 17"/></symbol>
+  <symbol id="i-pencil" viewBox="0 0 24 24"><path d="M4 20h4L19.5 8.5a2.1 2.1 0 0 0-3-3L5 17z"/><path d="m14.5 7.5 2 2"/></symbol>
+  <symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12M20 18h0"/><circle cx="16" cy="6" r="2"/><circle cx="10" cy="12" r="2"/><circle cx="18" cy="18" r="2"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-grip" viewBox="0 0 24 24"><circle cx="9" cy="6" r=".9"/><circle cx="15" cy="6" r=".9"/><circle cx="9" cy="12" r=".9"/><circle cx="15" cy="12" r=".9"/><circle cx="9" cy="18" r=".9"/><circle cx="15" cy="18" r=".9"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-more" viewBox="0 0 24 24"><circle cx="5" cy="12" r=".9"/><circle cx="12" cy="12" r=".9"/><circle cx="19" cy="12" r=".9"/></symbol>
+  <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M9 7V4.5h6V7M6 7l1 13h10l1-13"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-9 9"/></symbol>
+  <symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 15V4M7 9l5-5 5 5M4 15v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9z"/><path d="m4 7.5 8 4.5 8-4.5M12 12v9"/></symbol>
+  <symbol id="i-grid" viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></symbol>
+  <symbol id="i-inbox" viewBox="0 0 24 24"><path d="M3 13h5l1.5 3h5L16 13h5"/><path d="M5.5 5h13L21 13v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-6z"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.6a3.5 3.5 0 0 1 0 6.8M18 14.2a6.5 6.5 0 0 1 3.5 5.8"/></symbol>
+  <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3.5 2.5 20h19z"/><path d="M12 10v4.5M12 17.3h.01"/></symbol>
+  <symbol id="i-merge" viewBox="0 0 24 24"><path d="M6 4v4a6 6 0 0 0 6 6h0a6 6 0 0 1 6 6M18 4v4a6 6 0 0 1-6 6"/><path d="m15 17 3 3 3-3"/></symbol>
+  <symbol id="i-logout" viewBox="0 0 24 24"><path d="M14 4h4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-4M10 16l-4-4 4-4M6 12h10"/></symbol>
+  <symbol id="i-list" viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11M4.5 6h.01M4.5 12h.01M4.5 18h.01"/></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 11a8 8 0 0 0-14.6-4.5L4 8M4 4v4h4M4 13a8 8 0 0 0 14.6 4.5L20 16M20 20v-4h-4"/></symbol>
+
+</svg>
+
+<div class="panel">
+  <!-- ================= yan menü ================= -->
+  <aside class="pside">
+    <a class="pside__brand" href="index.html"><span class="logo">künye<span>.</span></span><small>panel</small></a>
+    <nav class="pnav">
+      <a class="is-on" href="panel-ogeler.html"><svg class="icon"><use href="#i-box"/></svg>Öğeler</a>
+      <a href="panel-sablon.html"><svg class="icon"><use href="#i-grid"/></svg>Kategoriler</a>
+      <a href="panel-oneriler.html"><svg class="icon"><use href="#i-inbox"/></svg>Öneriler <span class="n">5</span></a>
+      <a href="panel-degerler.html"><svg class="icon"><use href="#i-tag"/></svg>Değerler</a>
+      <div class="pnav__sep"></div>
+      <a href="panel-kullanicilar.html"><svg class="icon"><use href="#i-users"/></svg>Kullanıcılar</a>
+      <a href="panel-ayarlar.html"><svg class="icon"><use href="#i-sliders"/></svg>Ayarlar</a>
+    </nav>
+    <div class="pside__user">
+      <span class="avatar">E</span>
+      <div>editor<small>Editör</small></div>
+    </div>
+  </aside>
+
+  <div class="pmain">
+    <!-- ================= üst çubuk ================= -->
+    <header class="phead">
+      <nav class="crumbs" aria-label="Konum">
+        <a href="#">Öğeler</a><span class="sep">/</span><b>Xiaomi 17 Ultra</b>
+      </nav>
+      <span class="status">Yayında</span>
+      <div class="phead__actions">
+        <a class="btn btn--ghost btn--sm" href="detay.html"><svg class="icon icon--sm"><use href="#i-eye"/></svg>Görüntüle</a>
+        <button class="btn btn--sm">Kaydet</button>
+      </div>
+    </header>
+
+    <main class="pbody">
+
+      <!-- temel bilgiler -->
+      <section class="card">
+        <div class="card__head"><h2>Temel bilgiler</h2></div>
+        <div class="card__body fields">
+          <label class="field">
+            <span class="lbl">Ad</span>
+            <span class="input"><input value="Xiaomi 17 Ultra"></span>
+          </label>
+          <label class="field">
+            <span class="lbl">Kategori</span>
+            <span class="input"><select><option>Telefonlar</option><option>Laptoplar</option><option>Akıllı Saatler</option></select></span>
+          </label>
+          <label class="field">
+            <span class="lbl">Marka</span>
+            <span class="input"><input value="Xiaomi"></span>
+          </label>
+          <label class="field">
+            <span class="lbl">Çıkış yılı</span>
+            <span class="input"><input value="2026" inputmode="numeric"></span>
+          </label>
+          <label class="field field--full">
+            <span class="lbl">Adres</span>
+            <span class="input"><span class="pre">kunye.app/telefon/</span><input value="xiaomi-17-ultra"></span>
+          </label>
+        </div>
+      </section>
+
+      <!-- görseller -->
+      <section class="card">
+        <div class="card__head"><h2>Görseller</h2><span class="meta">Sürükleyerek sırala · ilk görsel kapak olur</span></div>
+        <div class="card__body">
+          <label class="drop">
+            <svg class="icon"><use href="#i-upload"/></svg>
+            <span><b>Görsel sürükle</b> ya da <u>bilgisayardan seç</u></span>
+            <span class="hint">JPG, PNG, HEIC veya WebP · en fazla 20 MB · otomatik olarak WebP ve AVIF'e dönüştürülür</span>
+            <input type="file" accept="image/*" multiple class="sr-only">
+          </label>
+
+          <div class="imgs">
+            <figure class="imgc" style="margin:0">
+              <div class="imgc__pic">
+                <img src="img/p3.svg" alt="">
+                <span class="imgc__badge">Kapak</span>
+                <div class="imgc__tools">
+                  <button class="icon-btn icon-btn--sm" aria-label="Sil"><svg class="icon"><use href="#i-trash"/></svg></button>
+                </div>
+              </div>
+              <figcaption class="imgc__meta"><s>4,2 MB</s> → <b>96 KB</b><br>4 boyut · 64–1600 px</figcaption>
+            </figure>
+            <figure class="imgc" style="margin:0">
+              <div class="imgc__pic">
+                <img src="img/p3b.svg" alt="">
+                <div class="imgc__tools">
+                  <button class="icon-btn icon-btn--sm" aria-label="Kapak yap"><svg class="icon"><use href="#i-star"/></svg></button>
+                  <button class="icon-btn icon-btn--sm" aria-label="Sil"><svg class="icon"><use href="#i-trash"/></svg></button>
+                </div>
+              </div>
+              <figcaption class="imgc__meta"><s>3,1 MB</s> → <b>74 KB</b><br>4 boyut · 64–1600 px</figcaption>
+            </figure>
+            <figure class="imgc imgc--busy" style="margin:0">
+              <div class="imgc__pic"><svg class="icon" style="color:var(--faint)"><use href="#i-image"/></svg></div>
+              <figcaption class="imgc__meta">Dönüştürülüyor… %60<div class="bar"><span style="width:60%"></span></div></figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- özellik grupları -->
+      <div class="pbody__title">
+        <h2>Özellikler</h2>
+        <span class="hint">Telefonlar şablonundan geliyor</span>
+      </div>
+
+      <nav class="toc ptoc" aria-label="Özellik grupları">
+        <ul>
+          <li><a class="is-on" href="#g-ekran"><svg class="icon icon--sm"><use href="#i-phone"/></svg>Ekran <span class="done done--part">5/6</span></a></li>
+          <li><a href="#g-batarya"><svg class="icon icon--sm"><use href="#i-battery"/></svg>Batarya <span class="done">5/5</span></a></li>
+          <li><a href="#g-kamera"><svg class="icon icon--sm"><use href="#i-camera"/></svg>Kamera <span class="done">3/3</span></a></li>
+          <li><a href="#g-donanim"><svg class="icon icon--sm"><use href="#i-cpu"/></svg>Donanım <span class="done">4/4</span></a></li>
+          <li><a href="#g-depolama"><svg class="icon icon--sm"><use href="#i-drive"/></svg>Depolama <span class="done">3/3</span></a></li>
+          <li><a href="#g-baglanti"><svg class="icon icon--sm"><use href="#i-wifi"/></svg>Bağlantı <span class="done">5/5</span></a></li>
+          <li><a href="#g-tasarim"><svg class="icon icon--sm"><use href="#i-layers"/></svg>Tasarım <span class="done done--part">3/4</span></a></li>
+          <li><a href="#g-yazilim"><svg class="icon icon--sm"><use href="#i-code"/></svg>Yazılım <span class="done">2/2</span></a></li>
+        </ul>
+      </nav>
+
+      <!-- Ekran -->
+      <details class="card" id="g-ekran" open>
+        <summary class="card__head">
+          <span class="group__icon"><svg class="icon"><use href="#i-phone"/></svg></span>
+          <h3>Ekran</h3>
+          <span class="meta done done--part">5/6 dolu</span>
+          <svg class="icon icon--sm chev"><use href="#i-chevron"/></svg>
+        </summary>
+
+        <div class="arow">
+          <div class="arow__label">Ekran Boyutu<small>sayı</small></div>
+          <span class="input"><input value="6,9" inputmode="decimal"><span class="unit">inç</span></span>
+          <button class="icon-btn icon-btn--sm arow__x" title="Bu öğeden kaldır"><svg class="icon"><use href="#i-close"/></svg></button>
+        </div>
+
+        <div class="arow">
+          <div class="arow__label">Ekran Teknolojisi<small>tek seçim</small></div>
+          <span class="input">
+            <input value="OLED" aria-label="Ekran Teknolojisi">
+            <span class="combo__list" role="listbox">
+              <a class="is-active" href="#">OLED <span class="n">812 öğe</span></a>
+              <a href="#">AMOLED <span class="n">58 öğe</span></a>
+              <a href="#">LCD <span class="n">19 öğe</span></a>
+              <a class="new" href="#">+ Yeni değer olarak ekle</a>
+            </span>
+          </span>
+          <button class="icon-btn icon-btn--sm arow__x" title="Bu öğeden kaldır"><svg class="icon"><use href="#i-close"/></svg></button>
+        </div>
+
+        <div class="arow">
+          <div class="arow__label">Çözünürlük<small>metin</small></div>
+          <span class="input"><input value="1320 × 2848"><span class="unit">piksel</span></span>
+          <button class="icon-btn icon-btn--sm arow__x" title="Bu öğeden kaldır"><svg class="icon"><use href="#i-close"/></svg></button>
+        </div>
+
+        <div class="arow">
+          <div class="arow__label">Yenileme Hızı<small>sayı</small></div>
+          <span class="input"><input value="120" inputmode="numeric"><span class="unit">Hz</span></span>
+          <button class="icon-btn icon-btn--sm arow__x" title="Bu öğeden kaldır"><svg class="icon"><use href="#i-close"/></svg></button>
+        </div>
+
+        <div class="arow">
+          <div class="arow__label">Ekran Özellikleri<small>çoklu seçim</small></div>
+          <div class="tokens">
+            <span class="token">LTPO<button aria-label="Kaldır"><svg class="icon"><use href="#i-close"/></svg></button></span>
+            <span class="token">Çoklu Dokunma<button aria-label="Kaldır"><svg class="icon"><use href="#i-close"/></svg></button></span>
+            <span class="token">HDR Vivid<button aria-label="Kaldır"><svg class="icon"><use href="#i-close"/></svg></button></span>
+            <span class="token">10 bit Renk<button aria-label="Kaldır"><svg class="icon"><use href="#i-close"/></svg></button></span>
+            <input placeholder="Ekle…" aria-label="Değer ekle">
+          </div>
+          <button class="icon-btn icon-btn--sm arow__x" title="Bu öğeden kaldır"><svg class="icon"><use href="#i-close"/></svg></button>
+        </div>
+
+        <div class="arow is-empty">
+          <div class="arow__label">Dayanıklılık<small>tek seçim</small></div>
+          <span class="input"><input placeholder="Seç ya da yaz"></span>
+          <button class="icon-btn icon-btn--sm arow__x" title="Bu öğeden kaldır"><svg class="icon"><use href="#i-close"/></svg></button>
+        </div>
+
+        <div class="card__foot">
+          <button class="btn btn--link"><svg class="icon icon--sm"><use href="#i-plus"/></svg>Özellik ekle</button>
+          <span class="hint">Bu öğede gizlenen 2 özellik · <a href="#">göster</a></span>
+        </div>
+      </details>
+
+      <!-- Batarya -->
+      <details class="card" id="g-batarya" open>
+        <summary class="card__head">
+          <span class="group__icon"><svg class="icon"><use href="#i-battery"/></svg></span>
+          <h3>Batarya</h3>
+          <span class="meta done">5/5 dolu</span>
+          <svg class="icon icon--sm chev"><use href="#i-chevron"/></svg>
+        </summary>
+
+        <div class="arow">
+          <div class="arow__label">Kapasite (Tipik)<small>sayı</small></div>
+          <span class="input"><input value="6000" inputmode="numeric"><span class="unit">mAh</span></span>
+          <button class="icon-btn icon-btn--sm arow__x" title="Bu öğeden kaldır"><svg class="icon"><use href="#i-close"/></svg></button>
+        </div>
+        <div class="arow">
+          <div class="arow__label">Hızlı Şarj<small>var / yok</small></div>
+          <div class="seg seg--sm">
+            <label><input type="radio" name="hs" checked><span>Var</span></label>
+            <label><input type="radio" name="hs"><span>Yok</span></label>
+            <label><input type="radio" name="hs"><span>Bilinmiyor</span></label>
+          </div>
+          <button class="icon-btn icon-btn--sm arow__x" title="Bu öğeden kaldır"><svg class="icon"><use href="#i-close"/></svg></button>
+        </div>
+        <div class="arow">
+          <div class="arow__label">Hızlı Şarj Gücü<small>sayı</small></div>
+          <span class="input"><input value="100" inputmode="numeric"><span class="unit">W</span></span>
+          <button class="icon-btn icon-btn--sm arow__x" title="Bu öğeden kaldır"><svg class="icon"><use href="#i-close"/></svg></button>
+        </div>
+        <div class="arow">
+          <div class="arow__label">Kablosuz Şarj<small>var / yok</small></div>
+          <div class="seg seg--sm">
+            <label><input type="radio" name="ks" checked><span>Var</span></label>
+            <label><input type="radio" name="ks"><span>Yok</span></label>
+            <label><input type="radio" name="ks"><span>Bilinmiyor</span></label>
+          </div>
+          <button class="icon-btn icon-btn--sm arow__x" title="Bu öğeden kaldır"><svg class="icon"><use href="#i-close"/></svg></button>
+        </div>
+        <div class="arow">
+          <div class="arow__label">Değişir Batarya<small>var / yok</small></div>
+          <div class="seg seg--sm">
+            <label><input type="radio" name="db"><span>Var</span></label>
+            <label><input type="radio" name="db" checked><span>Yok</span></label>
+            <label><input type="radio" name="db"><span>Bilinmiyor</span></label>
+          </div>
+          <button class="icon-btn icon-btn--sm arow__x" title="Bu öğeden kaldır"><svg class="icon"><use href="#i-close"/></svg></button>
+        </div>
+
+        <div class="card__foot">
+          <button class="btn btn--link"><svg class="icon icon--sm"><use href="#i-plus"/></svg>Özellik ekle</button>
+        </div>
+      </details>
+
+      <!-- kapalı gruplar -->
+      <details class="card" id="g-kamera">
+        <summary class="card__head"><span class="group__icon"><svg class="icon"><use href="#i-camera"/></svg></span><h3>Kamera</h3><span class="meta done">3/3 dolu</span><svg class="icon icon--sm chev"><use href="#i-chevron"/></svg></summary>
+      </details>
+      <details class="card" id="g-donanim">
+        <summary class="card__head"><span class="group__icon"><svg class="icon"><use href="#i-cpu"/></svg></span><h3>Donanım</h3><span class="meta done">4/4 dolu</span><svg class="icon icon--sm chev"><use href="#i-chevron"/></svg></summary>
+      </details>
+      <details class="card" id="g-depolama">
+        <summary class="card__head"><span class="group__icon"><svg class="icon"><use href="#i-drive"/></svg></span><h3>Depolama</h3><span class="meta done">3/3 dolu</span><svg class="icon icon--sm chev"><use href="#i-chevron"/></svg></summary>
+      </details>
+      <details class="card" id="g-baglanti">
+        <summary class="card__head"><span class="group__icon"><svg class="icon"><use href="#i-wifi"/></svg></span><h3>Bağlantı</h3><span class="meta done">5/5 dolu</span><svg class="icon icon--sm chev"><use href="#i-chevron"/></svg></summary>
+      </details>
+      <details class="card" id="g-tasarim">
+        <summary class="card__head"><span class="group__icon"><svg class="icon"><use href="#i-layers"/></svg></span><h3>Tasarım</h3><span class="meta done done--part">3/4 dolu</span><svg class="icon icon--sm chev"><use href="#i-chevron"/></svg></summary>
+      </details>
+      <details class="card" id="g-yazilim">
+        <summary class="card__head"><span class="group__icon"><svg class="icon"><use href="#i-code"/></svg></span><h3>Yazılım</h3><span class="meta done">2/2 dolu</span><svg class="icon icon--sm chev"><use href="#i-chevron"/></svg></summary>
+      </details>
+
+      <button class="btn btn--dashed"><svg class="icon icon--sm"><use href="#i-plus"/></svg>Bu öğeye grup ekle</button>
+
+      <p class="pfoot">Son düzenleme: editor · 8 Ekim 2026 · <a href="#">Değişiklik geçmişi</a></p>
+    </main>
+  </div>
+</div>
+
+<nav class="mocknav"><a href="index.html" title="Ana">1</a><a href="arama.html" title="Arama">2</a><a href="liste.html" title="Liste">3</a><a href="detay.html" title="Detay">4</a><a href="duzeltme.html" title="Düzeltme">5</a><a href="panel-oge.html" aria-current="page">6 Öğe</a><a href="panel-sablon.html" title="Şablon">7</a><a href="panel-oneriler.html" title="Öneriler">8</a><a href="sonuclar.html" title="Sonuçlar">9</a><a href="favoriler.html" title="Favoriler">10</a><a href="giris.html" title="Giriş">11</a><a href="kurulum.html" title="Kurulum">12</a><a href="panel-ogeler.html" title="Öğeler">13</a><a href="panel-degerler.html" title="Değerler">14</a><a href="panel-kullanicilar.html" title="Kullanıcılar">15</a><a href="panel-ayarlar.html" title="Ayarlar">16</a></nav>
+</body>
+</html>
