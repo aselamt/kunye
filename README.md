@@ -7,7 +7,15 @@ Paylaşımlı hostingte çalışan, sade ve hızlı bir **özellik kataloğu**. 
 - JavaScript olmadan da çalışır; JS yalnızca deneyimi hızlandırır.
 - Lisans: MIT
 
-Ekran taslakları: [`design/`](design/) klasöründeki HTML dosyalarını tarayıcıda açabilirsin.
+![Ana sayfa](docs/ana.png)
+
+| Liste ve filtreler | Detay sayfası |
+|---|---|
+| ![Liste sayfası](docs/liste.png) | ![Detay sayfası](docs/detay.png) |
+
+**Hemen kurmak için:** [Sürümler](../../releases/latest) sayfasından `kunye-…zip` dosyasını indir ve aşağıdaki [Hostinger'e kurulum](#hostingere-kurulum-adım-adım) adımlarını izle. Yazılım bilgisi gerekmez; tüm kurulum tarayıcıdan yapılır.
+
+İlk tasarım taslakları [`design/`](design/) klasöründedir; HTML dosyalarını tarayıcıda açabilirsin.
 
 ---
 
@@ -67,7 +75,9 @@ Katalog okuma ağırlıklıdır. Yazmalar seyrektir: editör kaydı, favori, ön
 
 ### 2. Dosyaları yükle — ZIP ile (önerilen)
 
-1. [Sürümler](../../releases) sayfasından `kunye-1.0.0.zip` dosyasını indir. Kaynaktan çalışıyorsan `php tools/paketle.php` komutu paketi `dist/` klasöründe oluşturur.
+1. [Sürümler](../../releases/latest) sayfasının **Assets** bölümünden `kunye-<sürüm>.zip` dosyasını indir. Kaynaktan çalışıyorsan `php tools/paketle.php` komutu paketi `dist/` klasöründe oluşturur.
+
+   > GitHub'daki yeşil **Code → Download ZIP** düğmesini kullanma. O arşiv dosyaları `kunye-main/` adlı bir klasörün içine koyar; açtığında site `alanadin.com/kunye-main/` adresinde çalışır. Ayrıca testleri ve taslakları da içerir. Sürümler sayfasındaki ZIP doğrudan `public_html` içine açılmak üzere hazırlanmıştır.
 2. hPanel → **Dosyalar → Dosya Yöneticisi** → `public_html` klasörünü aç.
 3. Klasörde Hostinger'in koyduğu `default.php` dosyası varsa sil.
 4. **Yükle** düğmesiyle ZIP'i yükle. Ardından dosyaya sağ tıkla → **Çıkart**. Hedef olarak `public_html` klasörünü seç.
@@ -75,7 +85,7 @@ Katalog okuma ağırlıklıdır. Yazmalar seyrektir: editör kaydı, favori, ön
 
 > **FTP ile:** Hostinger'in FTP bilgileriyle (hPanel → Dosyalar → FTP Hesapları) ZIP'in içindekileri `public_html` klasörüne yükle. `.htaccess` ve `.user.ini` nokta ile başlar; FTP istemcinde gizli dosyaların gösterildiğinden emin ol.
 
-> **Git ile:** hPanel → **Gelişmiş → Git**. Depo adresini ve dalı (`main`) gir, kurulum yolunu boş bırak (`public_html`) ve **Dağıt**'a bas. `data/` ve `uploads/` içerikleri git'e girmez, bu yüzden sonraki dağıtımlar verine dokunmaz. `tests/`, `tools/` ve `design/` klasörleri de yüklenir, ama `.htaccess` onları dışarıya kapatır.
+> **Git ile:** hPanel → **Gelişmiş → Git**. Depo adresini ve dalı (`main`) gir, kurulum yolunu boş bırak (`public_html`) ve **Dağıt**'a bas. `data/` ve `uploads/` içerikleri git'e girmez, bu yüzden sonraki dağıtımlar verine dokunmaz. `tests/`, `tools/`, `design/` ve `docs/` klasörleri de yüklenir, ama `.htaccess` onları dışarıya kapatır.
 
 ### 3. Kurulum ekranı
 
@@ -229,7 +239,8 @@ app/
 assets/              css/, js/, ikonlar.svg
 data/                veritabanı, önbellek, oturumlar, günlükler (dışarıya kapalı)
 uploads/             üretilen görseller
-design/              onaylı HTML/CSS taslakları
+design/              ilk HTML/CSS taslakları
+docs/                README ekran görüntüleri
 tests/  tools/       testler ve geliştirme araçları (pakete girmez)
 ```
 
